@@ -64,3 +64,11 @@ adb -s <tv-ip>:5555 shell am start -n com.android.settings/.Settings --es :andro
 - 待验证：实体遥控器、待机唤醒、正常关机后开机、HDMI 画面和声音、手机投屏、视频实际播放。
 
 隐藏广告服务不等于已经证明所有开机广告消失。本次结果也不证明其他型号或固件兼容。
+
+## 首页 HDMI 入口
+
+首页第五格添加了本地编译的 HDMI / 信号源入口（包名 local.ryan.tvinputs，约 8.5 KB，无网络权限），点击会发送显式广播，打开小米原生信号源菜单，由用户选择 HDMI1 或 HDMI2。没有强制切换输入源，也没有增加开机服务。
+
+已在电视上从首页实际点击并检查截图，菜单能正常打开。此结果不代表 HDMI 音视频已测试。实现仅适用于上面的固件，包含接收器存在检查及权限错误提示。
+
+保留可审阅源码：[AndroidManifest.xml](xiaomi-3s48-inputs/AndroidManifest.xml)、[InputsActivity.java](xiaomi-3s48-inputs/InputsActivity.java)。使用 javac（Java 8 字节码）、d8（min API 19）、aapt、zipalign 和 apksigner 构建，签名启用 Android 4.4 所需的 v1；本地签名密钥与 APK 不上传。

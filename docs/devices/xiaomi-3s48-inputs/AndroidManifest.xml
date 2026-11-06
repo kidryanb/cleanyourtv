@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="local.ryan.tvinputs">
+    <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="19" />
+    <application android:label="HDMI / 信号源" android:theme="@android:style/Theme.NoDisplay" android:allowBackup="false" android:icon="@android:drawable/ic_menu_slideshow">
+        <activity android:name=".InputsActivity" android:exported="true" android:excludeFromRecents="true">
+            <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
+        </activity>
+    </application>
+</manifest>
