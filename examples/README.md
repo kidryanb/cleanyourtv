@@ -289,3 +289,5 @@ Notes for models that have no tested list yet live in [`docs/devices/`](../docs/
 
 To add your TV, see [CONTRIBUTING.md](../CONTRIBUTING.md). The quickest way to get a list is to
 run the prompt in [PROMPT.md](../PROMPT.md) and copy the packages your assistant disabled.
+
+- [小米电视 3S 48 英寸个人实测](../docs/devices/xiaomi-mitv3s-48-ryan.md)：Android 4.4.4，固件 7.7.21.1653；独立轻量桌面、可逆隐藏广告服务、重启结果与待验证事项。
